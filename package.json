@@ -3,7 +3,7 @@
   "description": "ArrayResolution web application",
   "homepage": "http://app.hft.exchange",
   "author": "Oleg Sklyanchuk <sklyanchuk@gmail.com>",
-  "license": "CC BY-NC-ND 4.0",
+  "license": "CC-BY-NC-4.0",
   "version": "0.0.10",
   "scripts": {
     "dev": "./start.sh",
