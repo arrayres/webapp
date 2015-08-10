@@ -39,7 +39,7 @@ module.exports = React.createClass
     @props.changeHandler parameters
 
   componentWillReceiveProps: (nextProps) ->
-    return if R.eqDeep @props.parameters, nextProps.parameters
+    return if R.equals @props.parameters, nextProps.parameters
     @replaceState {}
 
   configureParameter: ([key, value]) ->
