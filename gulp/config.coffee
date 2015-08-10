@@ -7,6 +7,7 @@ src = {}
 dest = {}
 
 module.exports =
+  port: parseInt process.env.ARRAYRES_PORT, 10
   src: src
   dest: dest
   browsers: ['last 2 versions']
@@ -53,7 +54,7 @@ src.serverData = [
 ]
 
 #
-# Source files and folders
+# Destination files and folders
 # --------------------
 
 dest.buildRoot = 'build'
