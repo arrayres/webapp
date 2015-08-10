@@ -40,7 +40,7 @@ module.exports = React.createClass
       parameters: {}
 
   handleParametersChange: (parameters) ->
-    return if R.eqDeep @state.parameters, parameters
+    return if R.equals @state.parameters, parameters
     @setState
       parameters: parameters
 

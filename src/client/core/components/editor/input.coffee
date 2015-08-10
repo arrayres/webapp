@@ -31,7 +31,7 @@ module.exports = React.createClass
     @setState selectedAsset: assets[0]
 
   setSelectedStrategy: (strategy) ->
-    return if R.eqDeep @state.selectedStrategy, strategy
+    return if R.equals @state.selectedStrategy, strategy
     @setState selectedStrategy: strategy
 
   render: ->
