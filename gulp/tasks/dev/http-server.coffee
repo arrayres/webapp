@@ -16,9 +16,6 @@ module.exports = ->
 
   serverOptions =
     path: "#{config.dest.serverRoot}/server.js"
-    env:
-      PORT: 1337
-      CACHE_AGE: 0
 
   distHttpServer()
     .pipe server serverOptions # start or restart the server

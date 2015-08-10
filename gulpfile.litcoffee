@@ -1,11 +1,10 @@
 Build system
 ================================================================================
 
-This is the build system for ArrayResUi.
+This is the build system for ArrayResolution web application.
 
-- Run `gulp` or `gulp dev:serve` to launch a live-reloaded site from dev build.
-- Run `gulp dev:build` to build a development version.
-- Run `gulp dist:build` to build a distribution version.
+- Run `npm run dev` to launch a live-reloaded site from dev build.
+- Run `npm run dist` to build a development version.
 
 Both *dev* and *dist* will write the generated code to the *./build* folder.
 

@@ -15,6 +15,6 @@ module.exports = ->
   browserSync
     .get 'default'
     .init
-      proxy: 'http://localhost:1337'
+      proxy: "http://localhost:#{config.port}"
       open: yes
       browser: 'default'
