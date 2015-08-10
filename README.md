@@ -1,25 +1,23 @@
-# ArrayResUi
+# ArrayRes web application
 
 ## Installation
 
- 1. Install [node.js](https://nodejs.org/)
+ 1. Install [node.js](https://nodejs.org/) and [git](https://git-scm.com/downloads)
 
- 2. Install [gulp](http://gulpjs.com/) with:
+ 2. Clone this repository
 
-        $ npm install --global gulp
+        $ git clone https://github.com/arrayres/webapp.git
+        $ cd webapp
 
- 3. Clone this repository
-
-        $ git clone https://github.com/olegskl/arrayresui.git
-        $ cd arrayresui
-
- 4. Install dependencies (may take some time)
+ 3. Install dependencies (may take some time)
 
         $ npm install
 
- 5. Run the application in the system default browser on localhost:3000
+ 4. Run the application in the system default browser on localhost:3000
 
-        $ gulp
+        $ npm run dev
+
+    Note that you will need a `start.sh` script with environment variables at the root of the repository.
 
 ## Contributing
 
@@ -29,8 +27,8 @@ Never commit to `master` branch. Instead, create pull requests to `develop` bran
 
  1. Clone the project and checkout the `develop` branch.
 
-        $ git clone https://github.com/olegskl/arrayresui.git
-        $ cd arrayresui
+        $ git clone https://github.com/arrayres/webapp.git
+        $ cd webapp
         $ git checkout develop
 
  2. Create a new topic branch for your idea, and commit to it.
@@ -41,7 +39,7 @@ Never commit to `master` branch. Instead, create pull requests to `develop` bran
 
  3. Push the branch and add upstream (tracking) reference.
 
-        $ git push -u
+        $ git push -u origin feat-awesome-idea
 
  4. Create a [pull request](https://help.github.com/articles/using-pull-requests/) to the `develop` branch.
 

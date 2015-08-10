@@ -1,7 +1,14 @@
 {
-  "name": "ArrayResUi",
-  "description": "ArrayResUi",
+  "name": "arrayres-webapp",
+  "description": "ArrayResolution web application",
+  "homepage": "http://app.hft.exchange",
+  "author": "Oleg Sklyanchuk <sklyanchuk@gmail.com>",
+  "license": "CC BY-NC-ND 4.0",
   "version": "0.0.10",
+  "scripts": {
+    "dev": "./start.sh",
+    "dist": "node_modules/.bin/gulp dist:build"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/olegskl/arrayresui.git"
