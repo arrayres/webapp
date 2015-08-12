@@ -1,7 +1,7 @@
 React = require 'react'
 { RouteHandler } = require 'react-router'
 
-Nav = require '../interfaces/nav/nav'
+Nav = require '../nav/nav'
 
 module.exports = React.createClass
   render: ->
