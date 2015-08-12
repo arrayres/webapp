@@ -5,7 +5,7 @@ require 'whatwg-fetch'
 React = require 'react'
 Router = require 'react-router'
 
-Home = require './components/home'
+Home = require './interfaces/home/home'
 App = require './interfaces/app/app'
 About = require './interfaces/about/about'
 Profile = require './interfaces/profile/profile'
