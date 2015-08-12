@@ -10,7 +10,7 @@ App = require './interfaces/app/app'
 About = require './interfaces/about/about'
 Profile = require './interfaces/profile/profile'
 Login = require './interfaces/login/login'
-Editor = require './components/editor'
+Editor = require './interfaces/editor/editor'
 
 { Route, Redirect, DefaultRoute, HistoryLocation } = Router
 

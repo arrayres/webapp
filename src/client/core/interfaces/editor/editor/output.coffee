@@ -4,8 +4,8 @@ OutputResult = require './output-result'
 OutputGraphPnL = require './output-graph-pnl'
 OutputGraphPosition = require './output-graph-position'
 
-simulations = require '../../observables/simulations'
-graphs = require '../../observables/graphs'
+simulations = require '../../../observables/simulations'
+graphs = require '../../../observables/graphs'
 
 # Simulation results
 module.exports = React.createClass

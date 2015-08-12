@@ -1,7 +1,7 @@
 R = require 'ramda'
 React = require 'react'
 
-{ assetsResource, strategiesResource } = require '../../resources'
+{ assetsResource, strategiesResource } = require '../../../resources'
 
 AssetsSelector = require './assets-selector'
 StrategiesSelector = require './strategies-selector'
