@@ -3,7 +3,7 @@ React = require 'react'
 
 dispatcher = require '../dispatcher'
 authObservable = require '../observables/auth'
-usersResource = require '../resources/users'
+{ usersResource } = require '../resources'
 
 module.exports = React.createClass
   mixins: [Navigation, State]
@@ -23,7 +23,7 @@ module.exports = React.createClass
       .filter (authData) -> authData is null
       .forEach => @handleLogout()
     usersResource
-      .fetchMe()
+      .fetch 'me'
       .then (user) -> dispatcher.emit 'auth', user
 
   componentWillUnmount: ->
