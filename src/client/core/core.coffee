@@ -9,14 +9,14 @@ Home = require './components/home'
 App = require './components/app'
 About = require './components/about'
 Profile = require './components/profile'
-Auth = require './components/auth'
+Login = require './interfaces/login/login'
 Editor = require './components/editor'
 
 { Route, Redirect, DefaultRoute, HistoryLocation } = Router
 
 routes =
   <Route name="home" path="/" handler={Home}>
-    <Route name="auth" path="auth" handler={Auth}/>
+    <Route name="auth" path="auth" handler={Login}/>
     <Route name="app" path="app" handler={App}>
       <Route name="editor" path="editor" handler={Editor}/>
       <Route name="about" path="about" handler={About}/>
