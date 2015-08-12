@@ -2,6 +2,6 @@ React = require 'react'
 
 module.exports = React.createClass
   render: ->
-    <section className="app-main">
+    <section className="editor">
       <h1>About</h1>
     </section>

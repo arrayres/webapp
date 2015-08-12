@@ -5,18 +5,18 @@ require 'whatwg-fetch'
 React = require 'react'
 Router = require 'react-router'
 
-Home = require './components/home'
-App = require './components/app'
-About = require './components/about'
-Profile = require './components/profile'
-Auth = require './components/auth'
-Editor = require './components/editor'
+Home = require './interfaces/home/home'
+App = require './interfaces/app/app'
+About = require './interfaces/about/about'
+Profile = require './interfaces/profile/profile'
+Login = require './interfaces/login/login'
+Editor = require './interfaces/editor/editor'
 
 { Route, Redirect, DefaultRoute, HistoryLocation } = Router
 
 routes =
   <Route name="home" path="/" handler={Home}>
-    <Route name="auth" path="auth" handler={Auth}/>
+    <Route name="auth" path="auth" handler={Login}/>
     <Route name="app" path="app" handler={App}>
       <Route name="editor" path="editor" handler={Editor}/>
       <Route name="about" path="about" handler={About}/>

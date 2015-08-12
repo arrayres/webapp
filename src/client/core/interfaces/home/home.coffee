@@ -1,9 +1,9 @@
 React = require 'react'
 { RouteHandler, Navigation, State } = require 'react-router'
 
-dispatcher = require '../dispatcher'
-authObservable = require '../observables/auth'
-{ usersResource } = require '../resources'
+dispatcher = require '../../dispatcher'
+authObservable = require '../../observables/auth'
+{ usersResource } = require '../../resources'
 
 module.exports = React.createClass
   mixins: [Navigation, State]

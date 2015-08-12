@@ -1,7 +1,7 @@
 R = require 'ramda'
 React = require 'react'
 
-dispatcher = require '../../dispatcher'
+dispatcher = require '../../../dispatcher'
 
 # SimulationTrigger
 module.exports = React.createClass
