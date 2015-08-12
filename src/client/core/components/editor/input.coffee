@@ -1,7 +1,7 @@
 R = require 'ramda'
 React = require 'react'
 
-api = require '../../modules/api'
+{ assetsResource, strategiesResource } = require '../../resources'
 
 AssetsSelector = require './assets-selector'
 StrategiesSelector = require './strategies-selector'
@@ -21,9 +21,9 @@ module.exports = React.createClass
     strategyCode: dummyUserCode
 
   componentDidMount: ->
-    api.get '/assets'
+    assetsResource.fetch()
       .then (assets) => @setState availableAssets: assets
-    api.get '/strategies'
+    strategiesResource.fetch()
       .then (strategies) => @setState availableStrategies: strategies
 
   setSelectedAssets: (assets) ->

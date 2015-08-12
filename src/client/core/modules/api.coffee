@@ -1,6 +1,6 @@
 'use strict'
 
-{ merge } = require 'ramda'
+Promise = require 'promise'
 dispatcher = require '../dispatcher'
 
 #
@@ -8,8 +8,9 @@ dispatcher = require '../dispatcher'
 # @param  {String} method HTTP verb.
 # @return {Object}        HTTP fetch options.
 #
-generateOptions = (method) ->
+generateOptions = (method, body) ->
   method: method
+  body: JSON.stringify body
   credentials: 'same-origin'
   headers:
     'Accept': 'application/json'
@@ -21,16 +22,15 @@ generateOptions = (method) ->
 # @throws {Error}           When backend responds with 401 error.
 # @return {Object}          HTTP fetch response (identity).
 #
-authFailureInterceptor = (response) ->
+interceptPossibleAuthFailure = (response) ->
   if response.status is 401
     dispatcher.emit 'auth', null
     throw new Error "#{response.status} #{response.statusText}"
   response
 
 ['get', 'post', 'put', 'delete'].forEach (method) ->
-  fetchOptions = generateOptions method
-  exports[method] = (url, customOptions) ->
-    mergedOptions = merge fetchOptions, customOptions
-    fetch "/api#{url}", mergedOptions
-      .then authFailureInterceptor
+  exports[method] = (url, body) ->
+    new Promise (resolve) -> resolve generateOptions method, body
+      .then (options) -> fetch "/api/#{url}", options
+      .then interceptPossibleAuthFailure
       .then (response) -> response.json()

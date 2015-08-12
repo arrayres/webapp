@@ -1,13 +1,12 @@
 Rx = require 'rx'
 
-api = require '../modules/api'
+{ simulationsResource } = require '../resources'
 dispatcher = require '../dispatcher'
 
 module.exports = Rx.Observable
   .fromEvent dispatcher, 'simulation'
   .flatMap (payload) ->
-    options = body: JSON.stringify payload
-    api.post '/simulations/', options
+    simulationsResource.create payload
       .then (data) ->
         request: payload
         response: data
