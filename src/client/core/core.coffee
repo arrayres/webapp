@@ -7,7 +7,7 @@ Router = require 'react-router'
 
 Home = require './components/home'
 App = require './components/app'
-About = require './components/about'
+About = require './interfaces/about/about'
 Profile = require './components/profile'
 Login = require './interfaces/login/login'
 Editor = require './components/editor'
