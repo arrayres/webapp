@@ -1,8 +1,8 @@
 React = require 'react'
 
-NavLogo = require './nav/logo'
-NavTabs = require './nav/tabs'
-NavLegal = require './nav/legal'
+NavLogo = require './logo/logo'
+NavTabs = require './tabs/tabs'
+NavLegal = require './legal/legal'
 
 # Main navigation component:
 module.exports = React.createClass
